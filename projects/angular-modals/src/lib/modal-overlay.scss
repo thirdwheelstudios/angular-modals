@@ -1,0 +1,33 @@
+.modal-overlay {
+    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .modal-overlay > * {
+      flex-direction: column;
+      display: flex;
+  }
+  
+  .modal-dialog {
+    min-width: 600px;
+    max-width: 60%;
+    background-color: #fff;
+    color: #222;
+    margin-top: 3%;
+    padding: 15px;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .modal-dialog .footer button {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+  

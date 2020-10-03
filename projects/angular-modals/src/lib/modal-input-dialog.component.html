@@ -1,0 +1,18 @@
+<div class="modal-overlay" (click)="onOverlayClick($event)">
+    <div class="modal-dialog" (click)="onDialogClick($event)">
+      <form #inputDialogForm="ngForm" (ngSubmit)="onSubmit()">
+        <h5>{{ title }}</h5>
+        
+        <div>
+          <label for="inputText">{{ text }}</label>
+          <input id="inputText" name="inputText" [(ngModel)]="inputText" type="text" required [maxlength]="maxInputLength" />
+        </div>
+  
+        <div class="footer">
+          <button *ngIf="okButtonText" class="{{ getButtonStyle(okButtonStyle) }}" type="submit" [disabled]="inputDialogForm.invalid">{{ okButtonText }}</button>
+          <button *ngIf="cancelButtonText" class="{{ getButtonStyle(cancelButtonStyle) }}" type="button" (click)="onCancelClick()">{{ cancelButtonText }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
