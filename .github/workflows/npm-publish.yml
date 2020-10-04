@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-      - run: npm test-headless
+      - run: npm run test-headless
 
   publish-npm:
     needs: build
