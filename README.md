@@ -30,7 +30,7 @@ export class AppModule { }
 <ng-template 3w-modal></ng-template>
 ```
 
-3. Inject `ModalService` into your components where needed. i.e:
+3. Where required, inject `ModalService` into your components. i.e:
 
 ```ts
 import { Component } from '@angular/core';
