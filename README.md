@@ -47,3 +47,24 @@ export class SomeComponent {
   }
 }
 ```
+
+4. Use the dialogs as follows:
+
+```ts
+    this.modalService.yesNo('Do you really want to do this?')
+      .subscribe(yesDoItNow => {
+
+        if (yesDoItNow)
+          console.log('Okay then, if you insist');
+
+      });
+
+    this.modalService.confirm('We just did something')
+      .subscribe();
+
+    this.modalService.warning('This is not good')
+      .subscribe();
+
+    this.modalService.error('This is REALLY not good')
+      .subscribe();
+```
