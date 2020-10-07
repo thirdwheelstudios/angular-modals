@@ -30,7 +30,7 @@ export class ModalService {
 
   yesNo(
     text: string,
-    title: string = 'Convey',
+    title: string = '',
     yesButtonStyle: ButtonStyle = ButtonStyle.Primary,
     noButtonStyle: ButtonStyle = ButtonStyle.Default) {
 
@@ -39,7 +39,7 @@ export class ModalService {
   }
 
   confirm(text: string,
-          title: string = 'Convey',
+          title: string = '',
           okButtonText: string = 'Ok',
           cancelButtonText: string = 'Cancel') {
 
@@ -48,21 +48,21 @@ export class ModalService {
   }
 
   warning(warningText: string,
-          title: string = 'Convey') {
+          title: string = '') {
 
     return this.showDialog(warningText, title, 'Ok', '', ButtonStyle.Warning, ButtonStyle.Default);
 
   }
 
   error(errorText: string,
-        title: string = 'Convey') {
+        title: string = '') {
 
     return this.showDialog(errorText, title, 'Ok', '', ButtonStyle.Error, ButtonStyle.Default);
 
   }
 
   input(text: string,
-        title: string = 'Convey',
+        title: string = '',
         okButtonText: string = 'Ok',
         cancelButtonText: string = 'Cancel',
         defaultInputText = '',
