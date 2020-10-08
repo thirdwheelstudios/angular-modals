@@ -9,7 +9,7 @@ The library provides support for simple Yes/No, Confirm, Warning and Error dialo
 npm install @thirdwheel-studios/angular-modals
 ```
 
-## Quick Start
+## Quickstart
 
 1. Import The `ModalModule` into your application, i.e. `AppModule`.
 
