@@ -1,0 +1,58 @@
+@import 'colors.scss';
+
+.button.button-error,
+button.button-error,
+input[type="button"].button-error {
+  color: $text-color;
+  background-color: $error-color;
+  border-color: $error-color;
+}
+
+.button.button-error:hover,
+button.button-error:hover,
+input[type="button"].button-error:hover,
+.button.button-error:focus,
+button.button-error:focus,
+input[type="button"].button-error:focus {
+  color: $text-color;
+  background-color: $error-dark-color;
+  border-color: $error-dark-color;
+}
+
+.button.button-warning,
+button.button-warning,
+input[type="button"].button-warning {
+  color: $text-color;
+  background-color: $warning-color;
+  border-color: $warning-color;
+}
+
+.button.button-warning:hover,
+button.button-warning:hover,
+input[type="button"].button-warning:hover,
+.button.button-warning:focus,
+button.button-warning:focus,
+input[type="button"].button-warning:focus {
+  color: $text-color;
+  background-color: $warning-dark-color;
+  border-color: $warning-dark-color;
+}
+
+.button[disabled],
+button[disabled],
+input[type="button"][disabled],
+.button[disabled]:hover,
+button[disabled]:hover,
+input[type="button"][disabled]:hover,
+.button[disabled]:focus,
+button[disabled]:focus,
+input[type="button"][disabled]:focus {
+  color: $text-color;
+  background-color: $disabled-color;
+  border-color: $disabled-dark-color;
+  cursor: not-allowed;
+}
+
+input:not([type=button])[readonly] {
+  background-color: $disabled-light-color;
+}
