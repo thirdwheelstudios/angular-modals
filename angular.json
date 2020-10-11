@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/angular-modals",
       "sourceRoot": "projects/angular-modals/src",
-      "prefix": "3w",
+      "prefix": "tw",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

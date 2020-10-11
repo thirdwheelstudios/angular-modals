@@ -5,7 +5,7 @@ import { IModalDialog } from './modal-dialog';
 
 @Component({
   templateUrl: './modal-dialog.component.html',
-  styleUrls: ['./modal-dialog.component.scss', './modal-overlay.scss']
+  styleUrls: ['./modal-dialog.component.scss', './modal-overlay.scss', './button-styles.scss']
 })
 export class ModalDialogComponent implements OnInit, OnDestroy, IModalDialog<boolean> {
 
