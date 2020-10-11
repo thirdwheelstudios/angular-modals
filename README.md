@@ -24,10 +24,17 @@ import { ModalModule } from '@thirdwheel-studios/angular-modals';
 })
 export class AppModule { }
 ```
-2. Attach a `3w-modal` directive to your application. i.e:
+2. Insert a `tw-modal-container` component after your main component(s), i.e:
 
 ```html
-<ng-template 3w-modal></ng-template>
+<my-app-component></my-app-component>
+<tw-modal-container></tw-modal-container>
+```
+
+Alternatively, attach a `tw-modal` directive to an existing component in your application, i.e:
+
+```html
+<my-app-component tw-modal></my-app-component>
 ```
 
 3. Where required, inject `ModalService` into your components. i.e:
