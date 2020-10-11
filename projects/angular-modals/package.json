@@ -1,6 +1,6 @@
 {
   "name": "@thirdwheel-studios/angular-modals",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false,
   "peerDependencies": {
     "@angular/common": "^9.0.7",

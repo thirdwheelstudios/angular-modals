@@ -95,7 +95,7 @@ export class ModalService {
   private createComponent<T extends IModalDialog<TResult>, TResult>(componentToCreate: Type<T>) {
 
     if (!this.vcr) {
-      throw new Error('No view container setup, please setup the view container or attach a 3w-modal directive');
+      throw new Error('No view container setup, please setup the tw-modal component or attach a tw-modal directive');
     }
 
     const factory = this.cfr.resolveComponentFactory<T>(componentToCreate);

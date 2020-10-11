@@ -1,24 +1,77 @@
-# AngularModals
+# angular-modals
+Lightweight library for creating modal dialogs in [Angular](https://angular.io/).
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+The library provides support for simple Yes/No, Confirm, Warning and Error dialogs out of the box. Custom modal dialog components can be created by implementing the `IModalDialog` interface. See [Creating Custom Dialogs](https://github.com/thirdwheelstudios/angular-modals/wiki/Creating-Custom-Dialogs) for more information.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project angular-modals` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project angular-modals`.
-> Note: Don't forget to add `--project angular-modals` or else it will be added to the default project in your `angular.json` file. 
+```bash
+npm install @thirdwheel-studios/angular-modals
+```
 
-## Build
+## Quickstart
 
-Run `ng build angular-modals` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Import The `ModalModule` into your application, i.e. `AppModule`.
 
-## Publishing
+```ts
+import { ModalModule } from '@thirdwheel-studios/angular-modals';
 
-After building your library with `ng build angular-modals`, go to the dist folder `cd dist/angular-modals` and run `npm publish`.
+@NgModule({
+  declarations: [],
+  imports: [ModalModule],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+2. Insert a `tw-modal-container` component after your main component(s), i.e:
 
-## Running unit tests
+```html
+<my-app-component></my-app-component>
+<tw-modal-container></tw-modal-container>
+```
 
-Run `ng test angular-modals` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Alternatively, attach a `tw-modal` directive to an existing component in your application, i.e:
 
-## Further help
+```html
+<my-app-component tw-modal></my-app-component>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+3. Where required, inject `ModalService` into your components. i.e:
+
+```ts
+import { Component } from '@angular/core';
+import { ModalService } from '@thirdwheel-studios/angular-modals';
+
+@Component({
+  templateUrl: './some.component.html',
+  styleUrls: ['./some.component.scss']
+})
+export class SomeComponent {
+
+  constructor(private readonly modalService: ModalService) {
+
+  }
+}
+```
+
+4. Use the dialogs as follows:
+
+```ts
+this.modalService.yesNo('Do you really want to do this?')
+  .subscribe(yesDoItNow => {
+
+    if (yesDoItNow)
+      console.log('Okay then, if you insist');
+
+  });
+
+this.modalService.confirm('We just did something')
+  .subscribe();
+
+this.modalService.warning('This is not good')
+  .subscribe();
+
+this.modalService.error('This is REALLY not good')
+  .subscribe();
+```
